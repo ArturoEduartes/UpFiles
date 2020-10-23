@@ -16,13 +16,13 @@ import java.nio.file.Path
 import java.util.stream.Collectors
 
 @Controller
-class FileUploadController @Autowired constructor(private val storageService: StorageService) {
+class FileUpController @Autowired constructor(private val storageService: StorageService) {
     @GetMapping("/")
     @Throws(IOException::class)
     fun listUploadedFiles(model: Model): String {
         model.addAttribute("files", storageService.loadAll().map { path: Path ->
             MvcUriComponentsBuilder.fromMethodName(
-                FileUploadController::class.java,
+                FileUpController::class.java,
                 "serveFile", path.fileName.toString()
             ).build().toUri().toString()
         }
