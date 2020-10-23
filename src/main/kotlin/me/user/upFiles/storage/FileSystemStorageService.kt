@@ -1,8 +1,5 @@
+package me.user.upFiles.storage
 
-import me.user.upFiles.storage.StorageException
-import me.user.upFiles.storage.StorageFileNotFoundException
-import me.user.upFiles.storage.StorageProperties
-import me.user.upFiles.storage.StorageService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.core.io.Resource
 import org.springframework.core.io.UrlResource
@@ -18,6 +15,7 @@ import java.nio.file.Paths
 import java.nio.file.StandardCopyOption
 import java.util.stream.Stream
 
+//TODO estudiar funcionamiento del paso de mensajes de la aplicacion
 @Service
 class FileSystemStorageService @Autowired constructor(properties: StorageProperties) : StorageService {
     private val rootLocation: Path

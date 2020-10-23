@@ -2,7 +2,6 @@ package me.user.upFiles.storage
 
 import org.springframework.boot.context.properties.ConfigurationProperties
 
-
 @ConfigurationProperties("storage")
 class StorageProperties {
     /**
