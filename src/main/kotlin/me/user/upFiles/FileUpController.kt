@@ -20,7 +20,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes
 import java.io.IOException
 import java.nio.file.Path
 import java.util.stream.Collectors
-
+// TODO estudiando MvcUriComponentsBuilder.fromMethodName
 @Controller
 class FileUpController @Autowired constructor(private val storageService: StorageService) {
     @GetMapping("/")

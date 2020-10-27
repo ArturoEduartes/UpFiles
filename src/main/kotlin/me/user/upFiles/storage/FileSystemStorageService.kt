@@ -85,6 +85,7 @@ class FileSystemStorageService @Autowired constructor(properties: StoragePropert
     override fun init() {
         try {
             Files.createDirectories(rootLocation)
+            println("Create folder of download Files in $rootLocation ")
         } catch (e: IOException) {
             throw StorageException("Could not initialize storage", e)
         }
