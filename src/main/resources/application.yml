@@ -1,0 +1,39 @@
+# For more view https://www.baeldung.com/spring-yaml-vs-properties
+spring:
+  profiles:
+    active:
+      - prod
+
+---
+# Testing Environment
+spring:
+  profiles:
+    - dev
+  application:
+    name: Dev-YAML
+  servlet:
+    multipart:
+      max-file-size: 128KB
+      max-request-size: 128KB
+logging:
+  pattern:
+    console: d{dd-MM-yyyy HH:mm:ss} %magenta([%thread]) %highlight(%-5level) %logger.%M - %msg%n
+storage:
+  location: myAppDev
+
+---
+# Production Environment
+spring:
+  profiles:
+    - prod
+  application:
+    name: Prod-YAML
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 60MB
+logging:
+  pattern:
+    console: d{dd-MM-yyyy HH:mm:ss} %magenta([%thread]) %highlight(%-5level) %logger.%M - %msg%n
+storage:
+  location: myAppProd
