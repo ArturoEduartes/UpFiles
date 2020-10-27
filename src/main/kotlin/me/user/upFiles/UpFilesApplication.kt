@@ -1,13 +1,17 @@
+/**
+ * @author: Arturo Eduartes
+ * @see: https://spring.io/guides/gs/uploading-files/
+ */
 package me.user.upFiles
 
 import me.user.upFiles.storage.StorageProperties
 import me.user.upFiles.storage.StorageService
 import org.springframework.boot.CommandLineRunner
-import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.boot.runApplication
 import org.springframework.context.annotation.Bean
+
 
 //TODO estudiar funcionamiento del proceso de ejecucion de la aplicacion
 

@@ -14,6 +14,7 @@ import java.nio.file.Path
 import java.nio.file.Paths
 import java.nio.file.StandardCopyOption
 import java.util.stream.Stream
+import javax.annotation.PreDestroy
 
 //TODO estudiar funcionamiento del paso de mensajes de la aplicacion
 @Service
@@ -91,5 +92,10 @@ class FileSystemStorageService @Autowired constructor(properties: StoragePropert
 
     init {
         rootLocation = Paths.get(properties.location)
+    }
+    @PreDestroy
+    fun destroy(){
+        println("Delete folder of download Files")
+        this.deleteAll()
     }
 }
