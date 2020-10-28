@@ -95,7 +95,7 @@ class FileSystemStorageService @Autowired constructor(properties: StoragePropert
         rootLocation = Paths.get(properties.location)
     }
     @PreDestroy
-    fun destroy(){
+    fun destroy() {
         println("Delete folder of download Files")
         this.deleteAll()
     }

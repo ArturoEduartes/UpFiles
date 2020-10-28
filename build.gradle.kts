@@ -1,3 +1,4 @@
+// Api Token Task 99553c836c83ef690fedc783877f28b8f61d0b05
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 import org.jlleitschuh.gradle.ktlint.reporter.ReporterType
 
@@ -52,9 +53,11 @@ ktlint {
     outputColorName.set("RED")
     ignoreFailures.set(false)
     enableExperimentalRules.set(false)
+    disabledRules.set(setOf("final-newline", "import-ordering", "indent",
+        "parameter-list-wrapping"))
     // End Add
     reporters {
-        // reporter(ReporterType.CHECKSTYLE)
+        // reporter(ReporterType.CHECKSTYLE)|
         // reporter(ReporterType.JSON)
         reporter(ReporterType.HTML)
     }
