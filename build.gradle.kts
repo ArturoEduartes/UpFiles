@@ -8,7 +8,7 @@ plugins {
     kotlin("plugin.spring") version "1.4.10"
     kotlin("kapt") version "1.4.10"
     id("org.jetbrains.dokka") version "1.4.10.2"
-    id("org.jlleitschuh.gradle.ktlint") version "9.3.0"
+    id("org.jlleitschuh.gradle.ktlint") version "9.4.1"
 }
 
 group = "me.user"
